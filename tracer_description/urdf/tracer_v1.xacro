@@ -47,6 +47,13 @@
     <xacro:property name="wheel_length" value="0.8e-01" />
     <xacro:property name="wheel_radius" value="1.600e-01" />
 
+    <link name="base_footprint" />
+    <joint name="base_footprint_base_link" type="fixed">
+        <origin xyz="0 0 0.15" rpy="0 0 0" />
+        <parent link="base_footprint" />
+        <child link="base_link" />
+    </joint>
+
     <!-- Base link -->
     <link name="base_link">
         <visual>
@@ -96,6 +103,7 @@
             <!--<inertia ixx="2.288641" ixy="0" ixz="0" iyy="5.103976" iyz="0" izz="3.431465" />-->
         </inertial>
     </link>
+
 
     <joint name="inertial_joint" type="fixed">
         <origin xyz="0 0 0" rpy="0 0 0" />

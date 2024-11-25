@@ -1,8 +1,8 @@
-#CP2102 ´®¿ÚºÅ0001 ÉèÖÃ±ðÃûÎªwheeltec_lidar
+#CP2102 ä¸²å£å·0001 è®¾ç½®åˆ«åä¸ºwheeltec_lidar
 echo  'KERNEL=="ttyUSB*", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60",ATTRS{serial}=="0001", MODE:="0777", GROUP:="dialout", SYMLINK+="wheeltec_lidar"' >/etc/udev/rules.d/wheeltec_lidar.rules
-#CH9102£¬Í¬Ê±ÏµÍ³°²×°ÁË¶ÔÓ¦Çý¶¯ ´®¿ÚºÅ0001 ÉèÖÃ±ðÃûÎªwheeltec_lidar
+#CH9102ï¼ŒåŒæ—¶ç³»ç»Ÿå®‰è£…äº†å¯¹åº”é©±åŠ¨ ä¸²å£å·0001 è®¾ç½®åˆ«åä¸ºwheeltec_lidar
 echo  'KERNEL=="ttyCH343USB*", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d4",ATTRS{serial}=="54B8001974", MODE:="0777", GROUP:="dialout", SYMLINK+="wheeltec_lidar"' >/etc/udev/rules.d/wheeltec_lidar2.rules
-#CH9102£¬Í¬Ê±ÏµÍ³Ã»ÓÐ°²×°¶ÔÓ¦Çý¶¯ ´®¿ÚºÅ0001 ÉèÖÃ±ðÃûÎªwheeltec_lidar
+#CH9102ï¼ŒåŒæ—¶ç³»ç»Ÿæ²¡æœ‰å®‰è£…å¯¹åº”é©±åŠ¨ ä¸²å£å·0001 è®¾ç½®åˆ«åä¸ºwheeltec_lidar
 echo  'KERNEL=="ttyACM*", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d4",ATTRS{serial}=="0001", MODE:="0777", GROUP:="dialout", SYMLINK+="wheeltec_lidar"' >/etc/udev/rules.d/wheeltec_lidar3.rules
 
 service udev reload
