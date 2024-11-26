@@ -51,30 +51,11 @@ class ChassisController:
         self._validate_duration(duration)
         self._move(linear_x=speed, duration=duration)
 
-    def move_clockwise(self, angular_speed=-1, duration=1):
-        """
-        Rotate clockwise
-        :param angular_speed: Rotate clockwise speed (-1.0 ~ 0.0 rad/s)
-        :param duration: duration (positive number, in seconds)
-        """
-        self._validate_angular_speed(angular_speed, "clockwise_speed", -1.0, 0.0)
-        self._validate_duration(duration)
-        self._move(angular_z=angular_speed, duration=duration)
 
-    def move_counterclockwise(self, angular_speed=1, duration=1):
+    def turn_left(self, speed=0.5, duration=1):
         """
-        Rotate counterclockwise
-        :param angular_speed: Rotate counterclockwise speed (0.0 ~ 1.0 rad/s)
-        :param duration: duration (positive number, in seconds)
-        """
-        self._validate_angular_speed(angular_speed, "counterclockwise_speed", 0.0, 1.0)
-        self._validate_duration(duration)
-        self._move(angular_z=angular_speed, duration=duration)
-
-    def forward_turn(self, speed=0.5, duration=1):
-        """
-        Forward turn (forward and rotation at the same time)
-        :param speed: forward speed (0.0 ~ 1.8 m/s)
+        turn left rotation
+        :param speed: move speed (0.0 ~ 1.8 m/s)
         :param duration: duration (positive number, in seconds)
         """
         angular_speed = 1
@@ -83,10 +64,10 @@ class ChassisController:
         self._validate_duration(duration)
         self._move(linear_x=speed, angular_z=angular_speed, duration=duration)
 
-    def backward_turn(self, speed=-0.5, duration=1):
+    def turn_right(self, speed=-0.5, duration=1):
         """
-        backward turn (backward and rotation at the same time)
-        :param speed: bacdward speed (-1.8 ~ 0.0 m/s)
+        turn right rotation
+        :param speed: move speed (-1.8 ~ 0.0 m/s)
         :param duration: duration (positive number, in seconds)
         """
         angular_speed = -1
@@ -165,12 +146,10 @@ if __name__ == '__main__':
         # 示例：前进、后退、顺逆时针旋转和转弯
         # controller.move_forward(speed=1.0, duration=2)               # 前进 2 秒
         # controller.move_backward(speed=-1, duration=2)            # 后退 2 秒
-        # controller.move_clockwise(angular_speed=-0.5, duration=2)   # 顺时针旋转 2 秒
-        # controller.move_counterclockwise(angular_speed=0.5, duration=2)  # 逆时针旋转 2 秒
-        # controller.forward_turn(speed=1.0, duration=2)  # 前进转弯 2 秒
-        # controller.backward_turn(speed=-1.0, duration=2) # 后退转弯 2 秒
+        # controller.turn_left(speed=1.0, duration=2)  # 向左旋转 2 秒
+        # controller.turn_right(speed=-1.0, duration=2) # 向右旋转 2 秒
 
-        # # 停止小车
+        # 停止小车
         # controller.stop()
 
     except rospy.ROSInterruptException:

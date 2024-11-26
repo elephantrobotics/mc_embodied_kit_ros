@@ -73,7 +73,7 @@ Nvidia Jeston TX2/Xavier/XavierNX have CAN controller(s) integrated in the main 
 
 ### Prerequisites for use
 
-* 终端切换到目标目录之后，输入 `python3` 指令：
+* 终端切换到目标目录之后，输入 `python` 指令：
 
     ```
     $ cd ~/catkin_ws/src/mc_embodied_kit_ros/tracer_bringup/scripts
@@ -114,35 +114,21 @@ Nvidia Jeston TX2/Xavier/XavierNX have CAN controller(s) integrated in the main 
   - `speed`: backward speed (-1.8 ~ 0 m/s).
   - `duration`: duration (positive number, in seconds).
 
-#### 3 `move_clockwise(angular_speed, duration)`
-- **function:** Rotate clockwise
+#### 3 `turn_left(speed, duration)`
+- **function:** turn left rotation
   
 - **Parameters:**
-  - `angular_speed`: Rotate clockwise speed (-1.0 ~ 0.0 rad/s).
+  - `speed`: move speed (0.0 ~ 1.8 m/s).
   - `duration`: duration (positive number, in seconds).
 
-#### 4 `move_counterclockwise(angular_speed, duration)`
-- **function:** Rotate counterclockwise
-  
-- **Parameters:**
-  - `angular_speed`: Rotate counterclockwise speed (0.0 ~ 1.0 rad/s).
-  - `duration`: duration (positive number, in seconds).
-
-#### 5 `forward_turn(speed, duration)`
-- **function:** Forward turn (forward and rotation at the same time)
-  
-- **Parameters:**
-  - `speed`: forward speed (0.0 ~ 1.8 m/s).
-  - `duration`: duration (positive number, in seconds).
-
-#### 6 `backward_turn(speed, duration)`
-- **function:** backward turn (backward and rotation at the same time)
+#### 4 `turn_right(speed, duration)`
+- **function:** turn right rotation
   
 - **Parameters:**
   - `speed`: backward speed (-1.8 ~ 0 m/s).
   - `duration`: duration (positive number, in seconds).
 
-#### 7 `stop(speed, duration)`
+#### 5 `stop(speed, duration)`
 - **function:** Stop Move
 
 
