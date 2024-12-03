@@ -6,7 +6,7 @@
 
     <!-- myarm_m -->
     <group ns="$(arg ns1)">
-        <param name="robot_description" command="$(find xacro)/xacro --inorder $(find mycobot_description)/urdf/myarm_m/myarm_m.urdf.xacro ns:=$(arg ns1)" />
+        <param name="robot_description" command="$(find xacro)/xacro --inorder $(find myarm_description)/urdf/myarm_m/myarm_m.urdf.xacro ns:=$(arg ns1)" />
         <!-- 关节控制gui -->
         <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui">
             <param name="use_gui" value="$(arg gui)" />
@@ -22,7 +22,7 @@
 
     <!-- myarm_c650 -->
     <group ns="$(arg ns2)">
-        <param name="robot_description" command="$(find xacro)/xacro --inorder $(find mycobot_description)/urdf/myarm_c650/myarm_c650.urdf.xacro ns:=$(arg ns2)" />
+        <param name="robot_description" command="$(find xacro)/xacro --inorder $(find myarm_description)/urdf/myarm_c650/myarm_c650.urdf.xacro ns:=$(arg ns2)" />
         <!-- 关节控制gui -->
         <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui">
             <param name="use_gui" value="$(arg gui)" />
