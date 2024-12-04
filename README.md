@@ -111,7 +111,7 @@ Nvidia Jeston TX2/Xavier/XavierNX have CAN controller(s) integrated in the main 
   - `duration`: duration (positive number, in seconds).
 
 #### 2 `move_backward(speed, duration)`
-- **function:** Move forward
+- **function:** Move backward
   
 - **Parameters:**
   - `speed`: backward speed (-1.8 ~ 0 m/s).
