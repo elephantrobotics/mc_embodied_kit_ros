@@ -31,48 +31,48 @@ class ChassisController:
             current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
             print("{} DEBUG [{}] linear x: {}, angular z: {}, duration: {}".format(current_time, action, linear_x,angular_z, duration))
 
-    def move_forward(self, speed=0.5, duration=1):
+    def move_forward(self, speed=0.3, duration=1):
         """
         Move forward
-        :param speed: forward speed (0.0 ~ 1.8 m/s)
+        :param speed: forward speed (0.0 ~ 0.5 m/s)
         :param duration: duration (positive number, in seconds)
         """
-        self._validate_linear_speed(speed, "forward_speed", 0.0, 1.8)
+        self._validate_linear_speed(speed, "forward_speed", 0.0, 0.5)
         self._validate_duration(duration)
         self._move(linear_x=speed, duration=duration)
 
-    def move_backward(self, speed=-0.5, duration=1):
+    def move_backward(self, speed=-0.3, duration=1):
         """
         Move backward
-        :param speed: backward speed (-1.8 ~ 0.0 m/s)
+        :param speed: backward speed (-0.5 ~ 0.0 m/s)
         :param duration: duration (positive number, in seconds)
         """
-        self._validate_linear_speed(speed, "backward_speed", -1.8, 0.0)
+        self._validate_linear_speed(speed, "backward_speed", -0.5, 0.0)
         self._validate_duration(duration)
         self._move(linear_x=speed, duration=duration)
 
 
-    def turn_left(self, speed=0.5, duration=1):
+    def turn_left(self, speed=0.3, duration=1):
         """
         turn left rotation
-        :param speed: move speed (0.0 ~ 1.8 m/s)
+        :param speed: move speed (0.0 ~ 0.5 m/s)
         :param duration: duration (positive number, in seconds)
         """
-        angular_speed = 1
-        self._validate_linear_speed(speed, "forward_speed", 0.0, 1.8)
-        self._validate_angular_speed(angular_speed, "forward_turn_speed", 0, 1.0)
+        angular_speed = 0.5
+        self._validate_linear_speed(speed, "forward_speed", 0.0, 0.5)
+        self._validate_angular_speed(angular_speed, "forward_turn_speed", 0, 0.5)
         self._validate_duration(duration)
         self._move(linear_x=speed, angular_z=angular_speed, duration=duration)
 
-    def turn_right(self, speed=-0.5, duration=1):
+    def turn_right(self, speed=-0.3, duration=1):
         """
         turn right rotation
-        :param speed: move speed (-1.8 ~ 0.0 m/s)
+        :param speed: move speed (-0.5 ~ 0.0 m/s)
         :param duration: duration (positive number, in seconds)
         """
-        angular_speed = -1
-        self._validate_linear_speed(speed, "backward_speed", -1.8, 0.0)
-        self._validate_angular_speed(angular_speed, "backward_turn_speed", -1.0, 0)
+        angular_speed = -0.5
+        self._validate_linear_speed(speed, "backward_speed", -0.5, 0.0)
+        self._validate_angular_speed(angular_speed, "backward_turn_speed", -0.5, 0)
         self._validate_duration(duration)
         self._move(linear_x=speed, angular_z=angular_speed, duration=duration)
 
