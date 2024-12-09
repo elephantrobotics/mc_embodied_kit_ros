@@ -107,28 +107,28 @@ Nvidia Jeston TX2/Xavier/XavierNX have CAN controller(s) integrated in the main 
 - **function:** Move forward
   
 - **Parameters:**
-  - `speed`: forward speed (0.0 ~ 1.8 m/s).
+  - `speed`: forward speed (0.0 ~ 0.5 m/s).
   - `duration`: duration (positive number, in seconds).
 
 #### 2 `move_backward(speed, duration)`
 - **function:** Move forward
   
 - **Parameters:**
-  - `speed`: backward speed (-1.8 ~ 0 m/s).
+  - `speed`: backward speed (-0.5 ~ 0 m/s).
   - `duration`: duration (positive number, in seconds).
 
 #### 3 `turn_left(speed, duration)`
 - **function:** turn left rotation
   
 - **Parameters:**
-  - `speed`: move speed (0.0 ~ 1.8 m/s).
+  - `speed`: move speed (0.0 ~ 0.5 m/s).
   - `duration`: duration (positive number, in seconds).
 
 #### 4 `turn_right(speed, duration)`
 - **function:** turn right rotation
   
 - **Parameters:**
-  - `speed`: backward speed (-1.8 ~ 0 m/s).
+  - `speed`: backward speed (-0.5 ~ 0 m/s).
   - `duration`: duration (positive number, in seconds).
 
 #### 5 `stop(speed, duration)`
