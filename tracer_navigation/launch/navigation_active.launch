@@ -36,7 +36,7 @@
     <param name="controller_patience" value="3.0"/>
     <param name="clearing_rotation_allowed" value="true"/>
 
-  </node>
+  </node>+
 
   <node pkg="rviz" type="rviz" name="rviz" args="-d $(find tracer_navigation)/rviz/teb.rviz"/>
 
