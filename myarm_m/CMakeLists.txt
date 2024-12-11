@@ -24,6 +24,7 @@ catkin_install_python(PROGRAMS
   scripts/combined_control.py
   scripts/slider_control.py
   scripts/control_by_rviz.py
+  scripts/mc_embodied_control.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

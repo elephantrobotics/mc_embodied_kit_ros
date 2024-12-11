@@ -7,13 +7,13 @@
   <link name="c1_base">
     <visual>
       <geometry>
-       <mesh filename="package://mycobot_description/urdf/myarm_c650/myarm_basic_base.dae"/>
+       <mesh filename="package://myarm_description/urdf/myarm_c650/myarm_basic_base.dae"/>
       </geometry>
       <origin xyz = "0.0 0 0 " rpy = " 0 0 0"/>
     </visual>
     <collision>
       <geometry>
-       <mesh filename="package://mycobot_description/urdf/myarm_c650/myarm_basic_base.dae"/>
+       <mesh filename="package://myarm_description/urdf/myarm_c650/myarm_basic_base.dae"/>
         </geometry>
         <origin xyz = "0.0 0 0 " rpy = " 0 0 0"/>
     </collision>
@@ -22,13 +22,13 @@
   <link name="c1_link1">
     <visual>
       <geometry>
-       <mesh filename="package://mycobot_description/urdf/myarm_c650/joint1.dae"/>
+       <mesh filename="package://myarm_description/urdf/myarm_c650/joint1.dae"/>
       </geometry>
       <origin xyz = "0.0 0 0.0065 " rpy = " 3.14159 0 0"/>
     </visual>
     <collision>
      <geometry>
-       <mesh filename="package://mycobot_description/urdf/myarm_c650/joint1.dae"/>
+       <mesh filename="package://myarm_description/urdf/myarm_c650/joint1.dae"/>
       </geometry>
       <origin xyz = "0.0 0 0.0065 " rpy = " 3.14159 0 0"/>
     </collision>
@@ -37,13 +37,13 @@
   <link name="c1_link2">
     <visual>
       <geometry>
-       <mesh filename="package://mycobot_description/urdf/myarm_c650/joint2.dae"/>
+       <mesh filename="package://myarm_description/urdf/myarm_c650/joint2.dae"/>
       </geometry>
     <origin xyz = "0.0 0.003 0.0 " rpy = " 3.14159 0 -1.5708 "/>
     </visual>
     <collision>
       <geometry>
-       <mesh filename="package://mycobot_description/urdf/myarm_c650/joint2.dae"/>
+       <mesh filename="package://myarm_description/urdf/myarm_c650/joint2.dae"/>
       </geometry>
       <origin xyz = "0.0 0.003 0.0 " rpy = " 3.14159 0 -1.5708"/>
     </collision>
@@ -53,13 +53,13 @@
     <visual>
       <geometry>
        
-       <mesh filename="package://mycobot_description/urdf/myarm_c650/joint3.dae"/>
+       <mesh filename="package://myarm_description/urdf/myarm_c650/joint3.dae"/>
       </geometry>
       <origin xyz = "0.0 -0.001 0.004 " rpy = " 0 0 0"/>
     </visual>
     <collision>
       <geometry>
-       <mesh filename="package://mycobot_description/urdf/myarm_c650/joint3.dae"/>
+       <mesh filename="package://myarm_description/urdf/myarm_c650/joint3.dae"/>
       </geometry>
       <origin xyz = "0.0 -0.001 0.004" rpy = " 0 0 0"/>
     </collision>
@@ -69,13 +69,13 @@
   <link name="c1_link4">
     <visual>
       <geometry>
-       <mesh filename="package://mycobot_description/urdf/myarm_c650/joint4.dae"/>
+       <mesh filename="package://myarm_description/urdf/myarm_c650/joint4.dae"/>
       </geometry>
     <origin xyz = "0.0 0 0.004 " rpy = " 0 3.14159 0"/>
     </visual>
     <collision>
        <geometry>
-       <mesh filename="package://mycobot_description/urdf/myarm_c650/joint4.dae"/>
+       <mesh filename="package://myarm_description/urdf/myarm_c650/joint4.dae"/>
       </geometry>
       <origin xyz = "0.0 0 0.004 " rpy = " 0 3.14159 0"/>
     </collision>
@@ -86,14 +86,14 @@
     <visual>
       <geometry>
        
-       <mesh filename="package://mycobot_description/urdf/myarm_c650/joint5.dae"/>
+       <mesh filename="package://myarm_description/urdf/myarm_c650/joint5.dae"/>
       </geometry>
     <origin xyz = "0 0.009 0.001 " rpy = " 3.14159 0 -1.5708"/>
     </visual>
     <collision>
       <geometry>
        
-       <mesh filename="package://mycobot_description/urdf/myarm_c650/joint5.dae"/>
+       <mesh filename="package://myarm_description/urdf/myarm_c650/joint5.dae"/>
       </geometry>
     <origin xyz = "0 0.009 0.001 " rpy = " 3.14159 0 -1.5708"/>
     </collision>
@@ -104,14 +104,14 @@
     <visual>
       <geometry>
        
-       <mesh filename="package://mycobot_description/urdf/myarm_c650/myarm_c_grip_Base.dae"/>
+       <mesh filename="package://myarm_description/urdf/myarm_c650/myarm_c_grip_Base.dae"/>
       </geometry>
     <origin xyz = "0 0 0.003 " rpy = " 3.14159 0 0"/>
     </visual>
     <collision>
       <geometry>
        
-       <mesh filename="package://mycobot_description/urdf/myarm_c650/myarm_c_grip_Base.dae"/>
+       <mesh filename="package://myarm_description/urdf/myarm_c650/myarm_c_grip_Base.dae"/>
       </geometry>
     <origin xyz = "0 0 0.003 " rpy = " 3.14159 0 0"/>
     </collision>
@@ -121,14 +121,14 @@
     <visual>
       <geometry>
        
-       <mesh filename="package://mycobot_description/urdf/myarm_c650/myarm_c_grip_R.dae"/>
+       <mesh filename="package://myarm_description/urdf/myarm_c650/myarm_c_grip_R.dae"/>
       </geometry>
     <origin xyz = "0.010 0 0 " rpy = " 1.5708 3.14159 -1.5708"/>
     </visual>
     <collision>
       <geometry>
        
-       <mesh filename="package://mycobot_description/urdf/myarm_c650/myarm_c_grip_R.dae"/>
+       <mesh filename="package://myarm_description/urdf/myarm_c650/myarm_c_grip_R.dae"/>
       </geometry>
     <origin xyz = "0.010 0 0 " rpy = " 1.5708 3.14159 -1.5708"/>
     </collision>
@@ -138,14 +138,14 @@
     <visual>
       <geometry>
        
-       <mesh filename="package://mycobot_description/urdf/myarm_c650/myarm_c_grip_L.dae"/>
+       <mesh filename="package://myarm_description/urdf/myarm_c650/myarm_c_grip_L.dae"/>
       </geometry>
     <origin xyz = "0.010 0 0 " rpy = " 1.5708 3.14159 -1.5708"/>
     </visual>
     <collision>
       <geometry>
        
-       <mesh filename="package://mycobot_description/urdf/myarm_c650/myarm_c_grip_L.dae"/>
+       <mesh filename="package://myarm_description/urdf/myarm_c650/myarm_c_grip_L.dae"/>
       </geometry>
     <origin xyz = "0.010 0 0 " rpy = " 1.5708 3.14159 -1.5708"/>
     </collision>
