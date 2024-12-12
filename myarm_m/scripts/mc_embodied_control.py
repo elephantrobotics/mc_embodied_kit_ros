@@ -13,6 +13,13 @@ import copy
 import traceback
 
 
+def shutdown_ros_node(node_name):
+    try:
+        subprocess.run(['rosnode', 'kill', node_name])
+        print(f"Node {node_name} has been shutdown.")
+    except subprocess.CalledProcessError as e:
+        print(f"Error: {e}")
+
 def linear_transform(x):
     # 两个已知数据点
     x1, y1 = -89.5, 0.022
@@ -32,6 +39,9 @@ def linear_transform(x):
 def main():
     # 初始化ROS节点
     rospy.init_node("combined_control", anonymous=True)
+    
+    # 关闭节点
+    shutdown_ros_node('/joint_state_publisher_gui')
 
     # 发布对象
     pub = rospy.Publisher('/joint_states', JointState, queue_size=10)

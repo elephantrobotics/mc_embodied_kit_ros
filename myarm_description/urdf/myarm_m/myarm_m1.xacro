@@ -160,7 +160,7 @@
 </joint>
 
  <joint name="m1_joint3" type="revolute">
-  <axis xyz=" 0 0 1"/>
+  <axis xyz=" 0 0 -1"/>
   <limit effort = "1000.0" lower = "-1.5882" upper = "1.7977" velocity = "0"/>
   <parent link="m1_link2"/>
   <child link="m1_link3"/>
