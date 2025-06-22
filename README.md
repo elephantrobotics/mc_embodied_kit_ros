@@ -21,7 +21,7 @@ Nvidia Jeston TX2/Xavier/XavierNX have CAN controller(s) integrated in the main 
 
     ```
     $ sudo apt-get update
-    $ sudo apt-get install build-essential git cmake libasio-dev
+    $ sudo apt-get install build-essential git cmake libasio-dev libpcap-dev
     $ sudo apt install ros-noetic-joint-state-publisher-gui
     $ sudo apt install ros-noetic-ros-controllers
     $ sudo apt install ros-noetic-gmapping
@@ -37,6 +37,7 @@ Nvidia Jeston TX2/Xavier/XavierNX have CAN controller(s) integrated in the main 
     $ cd ~/catkin_ws/src
     $ git clone https://github.com/elephantrobotics/mc_embodied_kit_ros.git
     $ cd ..
+    $ catkin_make --pkg tracer_msgs
     $ catkin_make
     ```
 
