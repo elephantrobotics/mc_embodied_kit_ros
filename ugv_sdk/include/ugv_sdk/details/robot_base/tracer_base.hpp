@@ -21,11 +21,12 @@
 #include "ugv_sdk/details/protocol_v2/protocol_v2_parser.hpp"
 
 namespace westonrobot {
-class TracerBaseV2 : public AgilexBase<ProtocolV2Parser>,
+template <typename ParserType>
+class TracerBase : public AgilexBase<ParserType>,
                      public TracerInterface {
  public:
-  TracerBaseV2() : AgilexBase<ProtocolV2Parser>(){};
-  ~TracerBaseV2() = default;
+  TracerBase() : AgilexBase<ProtocolV2Parser>(){};
+  ~TracerBase() = default;
 
   // set up connection
   bool Connect(std::string can_name) override {
@@ -72,10 +73,31 @@ class TracerBaseV2 : public AgilexBase<ProtocolV2Parser>,
     return tracer_actuator;
   }
 
+  TracerCommonSensorState GetCommonSensorState() override {
+    auto common_sensor =
+        AgilexBase<ParserType>::GetCommonSensorStateMsgGroup();
+
+    TracerCommonSensorState tracer_bms;
+
+    tracer_bms.time_stamp = common_sensor.time_stamp;
+    tracer_bms.bms_basic_state = common_sensor.bms_basic_state;
+
+    return tracer_bms;
+  }
+
+
   void ResetRobotState() override {
     // TODO
   }
 };
+}  // namespace westonrobot
+
+#include "ugv_sdk/details/protocol_v1/protocol_v1_parser.hpp"
+#include "ugv_sdk/details/protocol_v2/protocol_v2_parser.hpp"
+
+namespace westonrobot {
+using TracerBaseV1 = TracerBase<TracerProtocolV1Parser>;
+using TracerBaseV2 = TracerBase<ProtocolV2Parser>;
 }  // namespace westonrobot
 
 #endif /* TRACER_BASE_HPP */

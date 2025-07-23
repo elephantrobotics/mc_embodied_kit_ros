@@ -1,6 +1,7 @@
 <launch>
-  <include file="$(find tracer_bringup)/launch/tracer_robot_base.launch" />
-  <param name="robot_description" command="$(find xacro)/xacro '$(find tracer_description)/urdf/tracer_v1_myarm.xacro'" />
+  <!-- <include file="$(find tracer_bringup)/launch/tracer_robot_base.launch" /> -->
+  <include file="$(find ranger_bringup)/launch/ranger_mini_v2.launch" />
+  <param name="robot_description" command="$(find xacro)/xacro '$(find ranger_mini_v3)/urdf/ranger_mini.xacro'" />
         <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" ></node> -->
         <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
         <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
@@ -15,6 +16,12 @@
    <node pkg="tf" type="static_transform_publisher" name="base_to_laser" args="0.125 0.00 0.12 3.14 0 0  base_footprint laser 100" />
   </group>
 
-  <include file="$(find tracer_bringup)/launch/tracer_lidar.launch" />
+  <!-- <include file="$(find tracer_bringup)/launch/tracer_lidar.launch" /> -->
+  <include file="$(find ranger_bringup)/launch/ranger_lidar.launch" />
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find tracer_navigation)/rviz/ranger_mapping.rviz" />
 
 </launch>

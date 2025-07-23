@@ -76,6 +76,7 @@ using ScoutMiniProtocolV1Parser = ProtocolV1Parser<ScoutMiniLimits>;
 using BunkerProtocolV1Parser = ProtocolV1Parser<BunkerLimits>;
 
 using HunterProtocolV1Parser = ProtocolV1Parser<HunterV1Limits>;
+using TracerProtocolV1Parser = ProtocolV1Parser<BunkerLimits>;
 
 }  // namespace westonrobot
 
