@@ -7,4 +7,4 @@ sudo modprobe gs_usb
 sudo ip link set can0 up type can bitrate 500000
 
 # install can utils
-sudo apt install -y can-utils
+# sudo apt install -y can-utils
