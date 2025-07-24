@@ -179,7 +179,7 @@ Nvidia Jeston TX2/Xavier/XavierNX have CAN controller(s) integrated in the main 
 
 ### 地图导航
 
-在此之前，我们已经成功创建了空间地图，并获得了一组地图文件，即位于 `~/catkin_ws/src/mc_mebodied_kit_ros/tracer_navigation/map` 目录下的 map.pgm 和 map.yaml。
+在此之前，我们已经成功创建了空间地图，并获得了一组地图文件，即位于 `~/catkin_ws/src/mc_embodied_kit_ros/tracer_navigation/map` 目录下的 map.pgm 和 map.yaml。
 
 1. **开启底盘节点和雷达通信**
 
