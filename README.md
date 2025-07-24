@@ -120,15 +120,15 @@ Ranger Mini V3.0
     Open another new terminal console and enter the following command in the command line to save the map scanned by ranger:
 
     ```
-    cd ~/catkin_ws/src/mc_mebodied_kit_ros/ranger_navigation/map
+    cd ~/catkin_ws/src/mc_embodied_kit_ros/ranger_navigation/map
 
     rosrun map_server map_saver
     ```
-    After successful execution, two default map parameter files, map.pgm and map.yaml, will be generated in the current path (`~/catkin_ws/src/mc_mebodied_kit_ros/ranger_navigation/map`).
+    After successful execution, two default map parameter files, map.pgm and map.yaml, will be generated in the current path (`~/catkin_ws/src/mc_embodied_kit_ros/ranger_navigation/map`).
 
 ### Map Navigation
 
-Before this, we have successfully created a spatial map and obtained a set of map files, namely map.pgm and map.yaml in the `~/catkin_ws/src/mc_mebodied_kit_ros/ranger_navigation/map` directory.
+Before this, we have successfully created a spatial map and obtained a set of map files, namely map.pgm and map.yaml in the `~/catkin_ws/src/mc_embodied_kit_ros/ranger_navigation/map` directory.
 
 1. **Open chassis node and radar communication**
 
