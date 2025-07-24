@@ -171,11 +171,11 @@ Nvidia Jeston TX2/Xavier/XavierNX have CAN controller(s) integrated in the main 
     打开另一个新的终端控制台，在命令行中输入以下命令，保存 tracer 扫描的地图：
 
     ```
-    cd ~/catkin_ws/src/mc_mebodied_kit_ros/tracer_navigation/map
+    cd ~/catkin_ws/src/mc_embodied_kit_ros/tracer_navigation/map
 
     rosrun map_server map_saver
     ```
-    执行成功后，将在当前路径(`~/catkin_ws/src/mc_mebodied_kit_ros/tracer_navigation/map`)下生成两个默认地图参数文件，即map.pgm和map.yaml。
+    执行成功后，将在当前路径(`~/catkin_ws/src/mc_embodied_kit_ros/tracer_navigation/map`)下生成两个默认地图参数文件，即map.pgm和map.yaml。
 
 ### 地图导航
 
